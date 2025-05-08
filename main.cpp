@@ -360,7 +360,7 @@ int main() {
         initial_state[9] = 1;
         initial_state[10] = 0;
         initial_state[11] = 0;
-        initial_state[12] = 8;
+        initial_state[12] = 0;
     }else if (defaultpuzzle == 2){
         std::cout << "Enter your puzzle, use a zero to represent the blank space." << std::endl;
         std::cout << "Enter the bottom row (ten numbers, use space to seperate numbers): " << std::endl;
