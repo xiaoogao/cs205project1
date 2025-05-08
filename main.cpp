@@ -342,23 +342,37 @@ void manhattan_heuristic_search(Problem& problem){
 int main() {
     vector<int> initial_state(13);
 
+    int defaultpuzzle;
     cout << "This is Xiao's puzzle solver for nine man in a trench problem." << endl;
-    cout << "The initial state is " << endl;
-    // Set the default initial puzzle state
-    initial_state[0] = 1;
-    initial_state[1] = 2;
-    initial_state[2] = 3;
-    initial_state[3] = 0;
-    initial_state[4] = 0;
-    initial_state[5] = 0;
-    initial_state[6] = 5;
-    initial_state[7] = 6;
-    initial_state[8] = 8;
-    initial_state[9] = 9;
-    initial_state[10] = 0;
-    initial_state[11] = 4;
-    initial_state[12] = 7;
-    print_state(initial_state);
+    cout << "Type \"1\" to use a default puzzle, or \"2\" to enter your own puzzle." << endl;
+    cin >> defaultpuzzle;
+    if (defaultpuzzle == 1){
+        // Set the default initial puzzle state
+        initial_state[0] = 1;
+        initial_state[1] = 2;
+        initial_state[2] = 3;
+        initial_state[3] = 4;
+        initial_state[4] = 5;
+        initial_state[5] = 0;
+        initial_state[6] = 0;
+        initial_state[7] = 6;
+        initial_state[8] = 7;
+        initial_state[9] = 9;
+        initial_state[10] = 0;
+        initial_state[11] = 0;
+        initial_state[12] = 8;
+    }else if (defaultpuzzle == 2){
+        std::cout << "Enter your puzzle, use a zero to represent the blank space." << std::endl;
+        std::cout << "Enter the bottom row (ten numbers, use space to seperate numbers): " << std::endl;
+        cin >> initial_state[0] >> initial_state[1] >> initial_state[2] >> initial_state[3] >> 
+        initial_state[4] >> initial_state[5] >> initial_state[6] >> initial_state[7] >> 
+        initial_state[8] >> initial_state[9];
+        std::cout << "Enter the recess values: " << std::endl;
+        cin >> initial_state[10] >>initial_state[11] >>initial_state[12];
+
+    }
+    
+
 
  
     // The goal state for nine man in a trench is:
