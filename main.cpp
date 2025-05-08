@@ -348,16 +348,16 @@ int main() {
     cin >> defaultpuzzle;
     if (defaultpuzzle == 1){
         // Set the default initial puzzle state
-        initial_state[0] = 1;
+        initial_state[0] = 0;
         initial_state[1] = 2;
         initial_state[2] = 3;
         initial_state[3] = 4;
         initial_state[4] = 5;
-        initial_state[5] = 0;
-        initial_state[6] = 0;
-        initial_state[7] = 6;
-        initial_state[8] = 7;
-        initial_state[9] = 9;
+        initial_state[5] = 6;
+        initial_state[6] = 7;
+        initial_state[7] = 8;
+        initial_state[8] = 9;
+        initial_state[9] = 1;
         initial_state[10] = 0;
         initial_state[11] = 0;
         initial_state[12] = 8;
@@ -371,9 +371,6 @@ int main() {
         cin >> initial_state[10] >>initial_state[11] >>initial_state[12];
 
     }
-    
-
-
  
     // The goal state for nine man in a trench is:
     vector<int> goal_state;
